@@ -43,7 +43,7 @@ class App extends Component {
         console.log("params:", params.livroSlug);
 
         // Filtra os dados do livro, utilizando o slug
-        const livro = this.state.livros.find((livro) => livro.slug == params.livroSlug);
+        const livro = this.state.livros.find((livro) => livro.slug === params.livroSlug);
         console.log("Livro:", livro);
 
         // Retorna o componente que será renderizado
