@@ -1,13 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
+// Define o menu de navegação
 const Navegacao = () => {
     return (
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Frontend</a></li>
-            <li><a href="#">Programação</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Catálogo</a></li>
+            <li><NavLink style={({isActive}) => isActive ? {color: "#027399"} : undefined} to="/">Home</NavLink></li>
+            <li><NavLink style={({isActive}) => isActive ? {color: "#027399"} : undefined} to="/frontend">Frontend</NavLink></li>
+            <li><NavLink style={({isActive}) => isActive ? {color: "#027399"} : undefined} to="/programacao">Programação</NavLink></li>
+            <li><NavLink style={({isActive}) => isActive ? {color: "#027399"} : undefined} to="/design">Design</NavLink></li>
+            <li><NavLink style={({isActive}) => isActive ? {color: "#027399"} : undefined} to="/catalogo">Catálogo</NavLink></li>
         </ul>
     );
 };
